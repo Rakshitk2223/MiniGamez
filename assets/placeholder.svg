@@ -1,0 +1,7 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='140' height='100' viewBox='0 0 140 100' fill='none'>
+  <rect width='140' height='100' rx='14' fill='#1d2548'/>
+  <path d='M20 70L50 30L80 60L100 40L120 70' stroke='#6ccfff' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/>
+  <circle cx='50' cy='30' r='8' fill='#6ccfff'/>
+  <circle cx='100' cy='40' r='8' fill='#6ccfff'/>
+  <text x='70' y='92' font-size='14' text-anchor='middle' fill='#6ccfff' font-family='monospace'>ARCADE</text>
+</svg>

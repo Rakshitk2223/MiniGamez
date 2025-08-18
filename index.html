@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Arcade - 15 Classic Games</title>
+  <meta name="theme-color" content="#0f1225" />
+  <link rel="preload" href="assets/placeholder.svg" as="image" />
+  <link rel="preload" href="assets/snake.svg" as="image" />
+  <link rel="preload" href="assets/pong.svg" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Web Arcade</h1>
+    <p>Select a game to play. Press Esc to return to menu.</p>
+  </header>
+
+  <main class="app-main">
+    <nav id="menu" class="menu"></nav>
+    <section id="game-area" class="game-area hidden">
+      <div class="game-header">
+        <button id="back-btn" class="btn">← Back</button>
+        <h2 id="game-title"></h2>
+      </div>
+      <div id="game-root" class="game-root"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>Mini Gamez &middot; 15 browser games &middot; Keyboard friendly.</span>
+  </footer>
+
+  <script src="js/effects.js"></script>
+  <!-- Game modules -->
+  <script src="js/games/snake.js"></script>
+  <script src="js/games/pong.js"></script>
+  <script src="js/games/whack.js"></script>
+  <script src="js/games/memory.js"></script>
+  <script src="js/games/simon.js"></script>
+  <script src="js/games/breakout.js"></script>
+  <script src="js/games/flappy.js"></script>
+  <script src="js/games/minesweeper.js"></script>
+  <script src="js/games/connect4.js"></script>
+  <script src="js/games/2048.js"></script>
+  <script src="js/games/tetris.js"></script>
+  <script src="js/games/doodle.js"></script>
+  <script src="js/games/invaders.js"></script>
+  <script src="js/games/pacman.js"></script>
+  <script src="js/games/wordle.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

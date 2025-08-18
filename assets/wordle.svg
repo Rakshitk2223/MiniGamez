@@ -1,0 +1,11 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'>
+<rect width='120' height='90' rx='14' fill='#132042'/>
+<rect x='30' y='25' width='14' height='14' fill='#6ccfff'/>
+<rect x='46' y='25' width='14' height='14' fill='#8aff80'/>
+<rect x='62' y='25' width='14' height='14' fill='#6ccfff'/>
+<rect x='78' y='25' width='14' height='14' fill='#8aff80'/>
+<rect x='30' y='43' width='14' height='14' fill='#8aff80'/>
+<rect x='46' y='43' width='14' height='14' fill='#6ccfff'/>
+<rect x='62' y='43' width='14' height='14' fill='#8aff80'/>
+<rect x='78' y='43' width='14' height='14' fill='#6ccfff'/>
+</svg>

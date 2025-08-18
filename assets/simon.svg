@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'>
+<rect width='120' height='90' rx='14' fill='#132042'/>
+<circle cx='60' cy='45' r='30' fill='#0f1d3b'/>
+<path d='M60 15a30 30 0 0 1 30 30H60z' fill='#e9c46a'/>
+<path d='M60 45h30a30 30 0 0 1-30 30V45z' fill='#2a9d8f'/>
+<path d='M60 45v30A30 30 0 0 1 30 45h30z' fill='#264653'/>
+<path d='M60 15v30H30a30 30 0 0 1 30-30z' fill='#e76f51'/>
+</svg>
