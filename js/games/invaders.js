@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Invaders(root){
     const c=document.createElement('canvas'); c.width=520; c.height=360; c.className='canvas'; root.appendChild(c); const x=c.getContext('2d');
     let ship={x:240}, left=false,right=false, bullets=[], enemies=[], dir=1, step=0, loop;
@@ -18,5 +19,5 @@
     loop=setInterval(tick,16);
     return { destroy(){ clearInterval(loop); window.removeEventListener('keydown',key); window.removeEventListener('keyup',key); root.innerHTML=''; } };
   }
-  window.GameInvaders = root => Invaders(root);
+  WebArcade.invaders = root => Invaders(root);
 })();

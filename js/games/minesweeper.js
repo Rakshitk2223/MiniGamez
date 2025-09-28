@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Minesweeper(root){
     const size=8, mines=10; const grid=document.createElement('div'); grid.className='grid'; grid.style.gridTemplateColumns=`repeat(${size}, 28px)`; const info=document.createElement('div'); info.className='controls'; root.appendChild(info); root.appendChild(grid);
     const cells=[]; let revealed=0, ended=false; 
@@ -13,5 +14,5 @@
     info.textContent='Reveal all safe cells';
     return { destroy(){ root.innerHTML=''; } };
   }
-  window.GameMinesweeper = root => Minesweeper(root);
+  WebArcade.minesweeper = root => Minesweeper(root);
 })();

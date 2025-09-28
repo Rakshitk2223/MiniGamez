@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function G2048(root){
     const size=4; let grid=[...Array(size)].map(()=>Array(size).fill(0)); const wrap=document.createElement('div'); const gEl=document.createElement('div'); gEl.className='tw-grid'; const info=document.createElement('div'); info.className='controls'; wrap.appendChild(info); wrap.appendChild(gEl); root.appendChild(wrap);
     function add(){ const empt=[]; for(let r=0;r<size;r++) for(let c=0;c<size;c++) if(grid[r][c]===0) empt.push([r,c]); if(empt.length){ const [r,c]=empt[(Math.random()*empt.length)|0]; grid[r][c]= Math.random()<0.9?2:4; }}
@@ -15,5 +16,5 @@
     add(); add(); render();
     return { destroy(){ window.removeEventListener('keydown',key); root.innerHTML=''; } };
   }
-  window.Game2048 = root => G2048(root);
+  WebArcade['2048'] = root => G2048(root);
 })();

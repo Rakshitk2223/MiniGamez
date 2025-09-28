@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Tetris(root){
     const c=document.createElement('canvas'); c.width=200; c.height=400; c.className='canvas'; root.appendChild(c); const x=c.getContext('2d');
     const W=10,H=20,S=20; const board=[...Array(H)].map(()=>Array(W).fill(0));
@@ -28,5 +29,5 @@
     window.addEventListener('keydown',key); loop=setInterval(step,16);
     return { destroy(){ clearInterval(loop); window.removeEventListener('keydown',key); root.innerHTML=''; } };
   }
-  window.GameTetris = root => Tetris(root);
+  WebArcade.tetris = root => Tetris(root);
 })();

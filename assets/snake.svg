@@ -1,4 +1,7 @@
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'>
+	<rect width='120' height='90' fill='#555'/>
+</svg>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'>
 <rect width='120' height='90' rx='14' fill='#132042'/>
 <path d='M20 60c20-40 60-40 80 0' stroke='#6eff82' stroke-width='10' fill='none' stroke-linecap='round'/>
 <circle cx='30' cy='50' r='6' fill='#6eff82'/>

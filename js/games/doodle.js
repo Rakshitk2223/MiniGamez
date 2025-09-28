@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Doodle(root){
     const c=document.createElement('canvas'); c.width=320; c.height=480; c.className='canvas'; root.appendChild(c); const x=c.getContext('2d');
     let player={x:150,y:400,vy:0}, plat=[], left=false,right=false, score=0, loop;
@@ -15,5 +16,5 @@
     loop=setInterval(tick,16);
     return { destroy(){ clearInterval(loop); window.removeEventListener('keydown',key); window.removeEventListener('keyup',key); root.innerHTML=''; } };
   }
-  window.GameDoodle = root => Doodle(root);
+  WebArcade.doodle = root => Doodle(root);
 })();

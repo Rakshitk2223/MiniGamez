@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Wordle(root){
     const words=['APPLE','BRAIN','CLOUD','DRIVE','EAGER','FRAME','GRAPE','HEART','IDEAL','JELLY'];
     const answer=words[(Math.random()*words.length)|0]; let row=0, col=0; const board=[...Array(6)].map(()=>Array(5).fill(''));
@@ -9,5 +10,5 @@
     window.addEventListener('keydown',key); render();
     return { destroy(){ window.removeEventListener('keydown',key); root.innerHTML=''; } };
   }
-  window.GameWordle = root => Wordle(root);
+  WebArcade.wordle = root => Wordle(root);
 })();

@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Simon(root){
     const colors=['red','green','blue','yellow'];
     const grid=document.createElement('div'); grid.className='simon-grid';
@@ -17,5 +18,5 @@
     info.textContent='Repeat the sequence'; next();
     return { destroy(){ root.innerHTML=''; } };
   }
-  window.GameSimon = root => Simon(root);
+  WebArcade.simon = root => Simon(root);
 })();

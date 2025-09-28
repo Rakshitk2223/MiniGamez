@@ -1,0 +1,12 @@
+{
+  "name": "minigamez",
+  "version": "1.0.0",
+  "description": "Web Arcade of classic mini games unified under the WebArcade namespace.",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "watch": "node scripts/build.js --watch",
+    "dev": "node scripts/dev.js"
+  },
+  "devDependencies": {}
+}

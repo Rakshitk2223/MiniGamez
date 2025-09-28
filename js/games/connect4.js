@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Connect4(root){
     const W=7,H=6; const board=[...Array(H)].map(()=>Array(W).fill(0)); let turn=1; const el=document.createElement('div'); const info=document.createElement('div'); info.className='controls'; info.textContent='Red starts'; const grid=document.createElement('div'); grid.className='c4-board'; el.appendChild(grid); root.appendChild(info); root.appendChild(el);
     function render(){ grid.innerHTML=''; for(let r=0;r<H;r++) for(let c=0;c<W;c++){ const cell=document.createElement('div'); cell.className='c4-cell'; const chip=document.createElement('div'); const v=board[r][c]; if(v){ chip.className='c4-chip '+(v===1?'red':'yellow'); cell.appendChild(chip);} cell.addEventListener('click',()=>drop(c)); grid.appendChild(cell);} }
@@ -7,5 +8,5 @@
     render();
     return { destroy(){ root.innerHTML=''; } };
   }
-  window.GameConnect4 = root => Connect4(root);
+  WebArcade.connect4 = root => Connect4(root);
 })();

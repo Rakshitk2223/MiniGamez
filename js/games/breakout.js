@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Breakout(root){
     const c=document.createElement('canvas'); c.width=520; c.height=360; c.className='canvas'; root.appendChild(c);
     const x=c.getContext('2d');
@@ -26,5 +27,5 @@
     loop=setInterval(tick,16);
     return { destroy(){ clearInterval(loop); window.removeEventListener('keydown',key); window.removeEventListener('keyup',key); root.innerHTML=''; } };
   }
-  window.GameBreakout = root => Breakout(root);
+  WebArcade.breakout = root => Breakout(root);
 })();

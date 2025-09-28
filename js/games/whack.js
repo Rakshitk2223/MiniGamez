@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Whack(root){
     const grid=document.createElement('div'); grid.className='grid'; grid.style.gridTemplateColumns='repeat(4, 80px)';
     const cells=[]; let score=0, time=30, loop, moleIndex=-1;
@@ -11,5 +12,5 @@
     spawn(); draw(); loop=setInterval(tick,1000);
     return { destroy(){ clearInterval(loop); root.innerHTML=''; } };
   }
-  window.GameWhack = root => Whack(root);
+  WebArcade.whack = root => Whack(root);
 })();

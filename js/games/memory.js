@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Memory(root){
     const icons=['🍎','🍌','🍇','🍓','🥝','🍑','🍍','🥥'];
     const deck=[...icons,...icons].sort(()=>Math.random()-0.5);
@@ -21,5 +22,5 @@
     });
     return { destroy(){ root.innerHTML=''; } };
   }
-  window.GameMemory = root => Memory(root);
+  WebArcade.memory = root => Memory(root);
 })();

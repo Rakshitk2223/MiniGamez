@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Flappy(root){
     const c=document.createElement('canvas'); c.width=400; c.height=500; c.className='canvas'; root.appendChild(c);
     const x=c.getContext('2d');
@@ -21,5 +22,5 @@
     loop=setInterval(tick,16);
     return { destroy(){ clearInterval(loop); window.removeEventListener('keydown',key); root.innerHTML=''; } };
   }
-  window.GameFlappy = root => Flappy(root);
+  WebArcade.flappy = root => Flappy(root);
 })();

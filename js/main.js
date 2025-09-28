@@ -1,5 +1,6 @@
 // Main menu & game loader
-// Metadata only; actual init functions are exposed as window.Game* by each game file.
+// All game init functions are stored on global WebArcade object instead of polluting window.
+window.WebArcade = window.WebArcade || {};
 const games = [
   { id: 'snake', name: 'Snake', desc: 'Classic snake grows with food' },
   { id: 'pong', name: 'Pong', desc: 'One-player paddle vs wall' },
@@ -40,13 +41,7 @@ function buildMenu() {
 
 let currentGame = null; // holds object with optional destroy()
 function resolveInit(id){
-  const map = {
-    snake:'GameSnake', pong:'GamePong', whack:'GameWhack', memory:'GameMemory', simon:'GameSimon',
-    breakout:'GameBreakout', flappy:'GameFlappy', minesweeper:'GameMinesweeper', connect4:'GameConnect4',
-    '2048':'Game2048', tetris:'GameTetris', doodle:'GameDoodle', invaders:'GameInvaders', pacman:'GamePacman', wordle:'GameWordle'
-  };
-  const globalName = map[id];
-  const fn = globalName && window[globalName];
+  const fn = WebArcade[id];
   return typeof fn === 'function' ? fn : null;
 }
 function launch(id){

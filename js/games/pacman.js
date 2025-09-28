@@ -1,4 +1,5 @@
 (function(){
+  window.WebArcade = window.WebArcade || {};
   function Pacman(root){
     const map=[
       '###################',
@@ -27,5 +28,5 @@
     draw();
     return { destroy(){ window.removeEventListener('keydown',key); root.innerHTML=''; } };
   }
-  window.GamePacman = root => Pacman(root);
+  WebArcade.pacman = root => Pacman(root);
 })();
